@@ -1,0 +1,47 @@
+<section class="bg-success text-light p-3 "><i class="bi bi-people-fill me-1"></i>Doctor Details</section>
+
+      <div class="container">
+       
+        <h4 style="text-align: center" class="doc-info-color"> </h4>
+        <div class="table-wrapper">
+          <div class="bg-info p-1 h4 mt-3"><span ><b>DOCTORS LIST</b></span></div> 
+          <select class="hideLabel form-control" [(ngModel)]="doctId" name="Id" (change)="selectName(doctId);" >  
+            <option value="" disabled selected hidden>Select a Doctor from the list</option>  
+         <option [ngValue]="k.doctId" *ngFor="let k of doctors">  
+             {{k.docName}}  
+      </option>  
+ </select> 
+ <div *ngIf="doctorflag">
+          <table class="fl-table">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Speciality</th>
+                <th>Patient Attended</th>
+                
+                <!-- <th>Delete</th> -->
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>{{ doctorinfo.doctId }}</td>
+                <td>{{ doctorinfo.docName }}</td>
+                <td>{{ doctorinfo.doctAge }}</td>
+                <td>{{ doctorinfo.doctGender }}</td>
+                <td>{{ doctorinfo.doctSpecialist }}</td>
+                <td>{{ doctorinfo.numberOfpatientAttneded }}</td>
+                
+                <!-- <td class="text-center"><button class="btn btn-danger btn-xs btn-left-mr" (click)="deleteDoctor(doctorinfo.doctId)" ><span class="glyphicon glyphicon-remove" ></span> Delete</button></td> -->
+              </tr>
+            </tbody>
+
+            
+          </table>
+          </div>
+        </div>
+        
+      </div>

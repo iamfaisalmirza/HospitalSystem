@@ -1,0 +1,70 @@
+<section class="bg-success text-light p-3 "><i class="bi bi-people-fill me-1"></i>Create Doctor</section>
+<div class="bg mt-4">
+  <div class="container">
+    <div class="row">
+     
+    </div>
+  </div>
+  <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Doctor Created Successfully!</strong> You can view in Doctors List.
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <form >
+          <div class="mb-2">
+            <label for="name">Name</label>
+   <input type="text" class="form-control" placeholder="Doctor name" id="name"
+   required
+   pattern="[a-zA-Z][a-zA-Z ]+"
+   [(ngModel)]="doctor.docName" name="name"
+   #name="ngModel">
+   <div [hidden]="name.valid || name.pristine"
+      class="alert alert-danger">
+      <div [hidden]="!name.hasError('required')">Name is required</div>
+      <div [hidden]="!name.hasError('pattern')">Only alphabets allowed</div>
+   </div>
+          </div>
+          <div class="mb-2">
+            <label for="">Specialization</label>
+            <input name="field" [(ngModel)]="doctor.doctSpecialist" name="field" [value]="doctor.doctSpecialist" required="true" type="text" class="form-control" placeholder="Enter Field">
+          </div>
+          <div class="mb-2">
+            <label for="">Age</label>
+            <input name="age" [value]="doctor.doctAge" type="number" class="form-control" placeholder="Enter age"
+            required [(ngModel)]="doctor.doctAge" name="doctAge" 
+            #doctAge="ngModel" >
+            <div [hidden]="doctAge.valid || doctAge.pristine"
+              class="alert alert-danger">
+              <div [hidden]="!doctAge.hasError('required')">Age is required</div>
+  
+   </div>
+          </div>
+          <div class="mb-2">
+            <label for="gender">Gender</label>
+            <select id="gender"[(ngModel)]="doctor.doctGender" [value]="doctor.doctGender" class="form-control" name="gender" >
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="numberOfpatientAttneded"><span class="req"></span><strong>Patients Attended:</strong> </label>
+            <input class="form-control" type="number" [(ngModel)]="doctor.numberOfpatientAttneded"   name="numberOfpatientAttneded" id="numberOfpatientAttneded" required
+                placeholder="No. of Patients Attended" />
+            
+        </div>
+          <div class="mb-2 mt-2">
+            <button type="submit" name="submit_reg" value="Register"(click)="saveDoctor()" class="btn btn-success main-btn reg-btn" [disabled]="!name.valid" [disabled]="!doctAge.valid" >Create</button>
+           
+          </div>
+
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>

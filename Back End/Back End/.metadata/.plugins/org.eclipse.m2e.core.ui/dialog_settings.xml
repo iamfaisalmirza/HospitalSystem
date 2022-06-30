@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\Comrehnsive Assesment\Back End\Back End\cloud-gateway"/>
+			<item value="D:\Comrehnsive Assesment\Back End\Back End\service-registry"/>
+			<item value="D:\Comrehnsive Assesment\Back End\Back End\Patient-service"/>
+			<item value="D:\Comrehnsive Assesment\Back End\Back End\doctor-service"/>
+			<item value="E:\Patient-service"/>
+			<item value="E:\CA\Back End\cloud-gateway"/>
+			<item value="E:\CA\Back End\service-registry"/>
+			<item value="E:\Demos\Hospital_data_management-master\SpringBoot-backend"/>
+			<item value="E:\CA\Back End\patient-service"/>
+			<item value="E:\CA\Back End\doctor-service"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>
